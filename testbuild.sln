@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VSCode.Editor", "Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{652bb44f-e9a8-dae8-b7d9-f1d80eff3549}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{99012749-c41e-84ab-f45b-1f0932c8f59d}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,8 @@ Global
 		{b68aebd0-37be-2074-4abe-f044fccbd96b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{652bb44f-e9a8-dae8-b7d9-f1d80eff3549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{652bb44f-e9a8-dae8-b7d9-f1d80eff3549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99012749-c41e-84ab-f45b-1f0932c8f59d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99012749-c41e-84ab-f45b-1f0932c8f59d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

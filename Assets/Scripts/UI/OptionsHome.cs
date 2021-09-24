@@ -22,6 +22,8 @@ public class OptionsHome : MonoBehaviour
             dir.Delete(true); 
         }
 
+        Directory.CreateDirectory(Application.persistentDataPath + "/Game");
+
         PlayGame();
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     private bool isDead;
+    public int Score = 0;
     [SerializeField] private float timeTodead;
     [SerializeField] private Transform transformGroundCheck;
 
@@ -165,6 +166,7 @@ public class PlayerControl : MonoBehaviour
     {
         if(collider.gameObject.tag == "gem"){
             characterStats.Score(characterStats.Score() + 1);
+            Score += 1;
         }
 
         if(collider.gameObject.tag == "savePoint"){

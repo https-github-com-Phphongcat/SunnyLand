@@ -5,21 +5,72 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637652586222739605
-    m_Hash: 3436086870
+      ticks: 637680525603243459
+    m_Hash: 2338622824
   m_LockFileStatus:
     m_FilePath: C:/Users/phpho/testbuild/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637652586222939710
-    m_Hash: 622721157
+      ticks: 637680525603429801
+    m_Hash: 2114024686
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.unity.2d.sprite@1.0.0
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.0
+      source: 2
+      resolvedPath: C:\Users\phpho\testbuild\Library\PackageCache\com.unity.2d.sprite@1.0.0
+      assetPath: Packages/com.unity.2d.sprite
+      name: com.unity.2d.sprite
+      displayName: 2D Sprite
+      author:
+        name: 
+        email: 
+        url: 
+      category: 2D
+      type: 
+      description: Use Unity Sprite Editor Window to create and edit Sprite asset
+        properties like pivot, borders and Physics shape
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0
+        compatible:
+        - 1.0.0
+        verified: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - 2d
+      - sprite
+      - sprite editor window
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.2d.tilemap@1.0.0
       testable: 0
       isDirectDependency: 1
@@ -129,11 +180,13 @@ m_PackageAssets:
         - 2.6.4
         - 2.6.5
         - 2.6.9
+        - 2.6.10
         - 2.7.1
         - 2.7.2
         - 2.7.3
         - 2.7.4
         - 2.7.5
+        - 2.7.8
         - 2.8.0-exp.1
         - 2.8.0-exp.2
         - 2.8.0-pre.1
@@ -154,16 +207,18 @@ m_PackageAssets:
         - 2.6.4
         - 2.6.5
         - 2.6.9
+        - 2.6.10
         - 2.7.1
         - 2.7.2
         - 2.7.3
         - 2.7.4
         - 2.7.5
+        - 2.7.8
         - 2.8.0-exp.1
         - 2.8.0-exp.2
         - 2.8.0-pre.1
         - 2.8.0
-        verified: 2.6.9
+        verified: 2.6.10
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -255,6 +310,8 @@ m_PackageAssets:
         - 1.7.1
         - 1.8.0
         - 1.9.0
+        - 1.10.2
+        - 1.11.2
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -269,6 +326,8 @@ m_PackageAssets:
         - 1.7.1
         - 1.8.0
         - 1.9.0
+        - 1.10.2
+        - 1.11.2
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -547,6 +606,7 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
+        - 1.2.4
         compatible:
         - 1.0.2
         - 1.0.3
@@ -559,7 +619,8 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
-        verified: 1.2.3
+        - 1.2.4
+        verified: 1.2.4
       dependencies: []
       resolvedDependencies: []
       keywords: []

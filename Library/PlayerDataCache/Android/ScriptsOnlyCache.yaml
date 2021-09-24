@@ -39,15 +39,19 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
+    Unity.CollabProxy.Editor.dll:
+    - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
+    - Unity.Cloud.Collaborate.UserInterface.WindowCache
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.Timeline.Editor.dll:
+    - TimelinePreferences
+    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -103,59 +107,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1530}
     - Class: 114
-      Script: {instanceID: 1824}
+      Script: {instanceID: 1800}
     - Class: 114
-      Script: {instanceID: 1852}
+      Script: {instanceID: 1826}
     - Class: 114
-      Script: {instanceID: 1898}
+      Script: {instanceID: 1854}
     - Class: 114
-      Script: {instanceID: 1912}
+      Script: {instanceID: 1900}
     - Class: 114
-      Script: {instanceID: 2122}
+      Script: {instanceID: 1914}
     - Class: 114
-      Script: {instanceID: 2194}
+      Script: {instanceID: 2124}
     - Class: 114
-      Script: {instanceID: 2414}
+      Script: {instanceID: 2196}
     - Class: 114
-      Script: {instanceID: 2454}
+      Script: {instanceID: 2416}
     - Class: 114
-      Script: {instanceID: 2466}
+      Script: {instanceID: 2456}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2468}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2606}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2614}
+      Script: {instanceID: 2608}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2616}
     - Class: 114
-      Script: {instanceID: 2668}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 2772}
+      Script: {instanceID: 2670}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 2994}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 3090}
     - Class: 114
-      Script: {instanceID: 3488}
+      Script: {instanceID: 3452}
     - Class: 114
-      Script: {instanceID: 3668}
+      Script: {instanceID: 3490}
     - Class: 114
-      Script: {instanceID: 4090}
+      Script: {instanceID: 3670}
     - Class: 114
-      Script: {instanceID: 4172}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 4704}
+      Script: {instanceID: 4174}
     - Class: 114
-      Script: {instanceID: 4918}
+      Script: {instanceID: 4452}
     - Class: 114
-      Script: {instanceID: 29340}
+      Script: {instanceID: 4708}
     - Class: 114
-      Script: {instanceID: 77802}
+      Script: {instanceID: 4922}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -181,6 +185,8 @@ ScriptsOnlyBuild:
     - Class: 156049354
       Script: {instanceID: 0}
     - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 687078895
       Script: {instanceID: 0}
     - Class: 1839735485
       Script: {instanceID: 0}
@@ -212,23 +218,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1530}
     - Class: 114
-      Script: {instanceID: 1842}
+      Script: {instanceID: 1844}
     - Class: 114
-      Script: {instanceID: 2122}
+      Script: {instanceID: 2124}
     - Class: 114
-      Script: {instanceID: 2454}
+      Script: {instanceID: 2456}
     - Class: 114
-      Script: {instanceID: 2472}
+      Script: {instanceID: 2474}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2772}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2994}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3090}
     - Class: 114
-      Script: {instanceID: 4222}
+      Script: {instanceID: 4224}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -360,6 +366,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: c25d75647b81bf12982bbe7c1a963f07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinGame
   - hash:
       serializedVersion: 2
       Hash: cbae2ed2d2d53cc8f539e7cb4f29bc1f
@@ -590,7 +602,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 5d149084f0ffdb83333d10f612a8c83c
+      Hash: 8e06e6f179f35a1816db3fb6119a55b9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GamePlayManager
@@ -1022,7 +1034,7 @@ ScriptsOnlyBuild:
     className: CinemachineTouchInputMapper
   - hash:
       serializedVersion: 2
-      Hash: 5cd07f44a7de2d428a3d5a316960b33f
+      Hash: 6238af1c538daad8ac24c12f6a17a56f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerControl
@@ -1116,6 +1128,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: e7e9b497dba2711259566ed3b251c167
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OpossumControl
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -1218,18 +1236,6 @@ ScriptsOnlyBuild:
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
     className: SingleNodeBlocker
-  - hash:
-      serializedVersion: 2
-      Hash: e7e9b497dba2711259566ed3b251c167
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: OpossumControl
-  - hash:
-      serializedVersion: 2
-      Hash: c25d75647b81bf12982bbe7c1a963f07
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WinGame
   platform: 13
   scenePathNames:
   - Assets/Scenes/Home.unity

@@ -13,6 +13,8 @@ using System.Xml.Serialization;
 public class GamePlayManager : MonoBehaviour
 {
     private ItemControl[] listItem;
+
+    [SerializeField] private int frameRate;
     [SerializeField] private PlayerControl playerPrefab;
     [SerializeField] private List<ItemControl> itemPrefab;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
@@ -23,6 +25,8 @@ public class GamePlayManager : MonoBehaviour
 
     void Awake()
     {
+        Application.targetFrameRate = frameRate;
+
         listItem = FindObjectsOfType<ItemControl>();
         player = FindObjectOfType<PlayerControl>();
 
@@ -31,18 +35,23 @@ public class GamePlayManager : MonoBehaviour
     }
 
     void UpdateScore(){
-        string scoreText = "Score: " + player.characterStats.Score().ToString();
-        if(textScore != null){
-            textScore.text = scoreText;
+        textScore.text = "Score: " + player.characterStats.Score().ToString();
+    }
+
+    void FixedHandlePlayer()
+    {
+        if(cinemachineVirtualCamera.Follow == null){
+            cinemachineVirtualCamera.Follow = FindObjectOfType<PlayerControl>().transform;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateScore();
         SavePointPlayer();
         PlayerRepawn();
+        FixedHandlePlayer();
+        UpdateScore();
     }
 
     void SavePointPlayer()

@@ -23,11 +23,11 @@ public enum ItemType
 [System.Serializable]
 public class ItemSaveSystem : MonoBehaviour
 {
-    private const string itemsFile = "Items.save";
+    private const string itemsFile = "/Items.save";
 
     public void SaveData(ItemControl[] listItem)
     {
-        string path = Application.persistentDataPath + "/" + itemsFile;
+        string path = Application.persistentDataPath + itemsFile;
 
         BinaryFormatter formatter = new BinaryFormatter();
 
@@ -56,7 +56,7 @@ public class ItemSaveSystem : MonoBehaviour
 
     public void LoadData(ItemControl[] listItem, List<ItemControl> itemPrefab)
     {
-        string path = Application.persistentDataPath + "/" + itemsFile;
+        string path = Application.persistentDataPath + itemsFile;
 
         BinaryFormatter formatter = new BinaryFormatter();
 

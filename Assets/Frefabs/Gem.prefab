@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3238291321416594221}
   - component: {fileID: 3238291321416594218}
   - component: {fileID: 3238291321416594223}
-  - component: {fileID: 3238291321416594222}
+  - component: {fileID: 3606240049781742483}
   m_Layer: 0
   m_Name: Gem
   m_TagString: gem
@@ -120,7 +120,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3238291321416594222
+--- !u!114 &3606240049781742483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,5 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37368be8d39e8ca42a002de7a33b45c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTodead: 0.3
-  itemStats: {fileID: 11400000, guid: 220c3cab8d22573419439cb74a06ad98, type: 2}
+  timeTodead: 0.35
+  itemType: 0
