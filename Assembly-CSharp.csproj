@@ -45,14 +45,13 @@
      <Compile Include="Assets\Scripts\Scene\HomeManager.cs" />
      <Compile Include="Assets\Scripts\Items\CrankDownControl.cs" />
      <Compile Include="Assets\Scripts\Scene\GamePlayManager.cs" />
-     <Compile Include="Assets\Scripts\Data\DataManager.cs" />
-     <Compile Include="Assets\Scripts\Data\PlayerData.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerEventUI.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\UI\ScrollBackground.cs" />
      <Compile Include="Assets\Scripts\Enemies\Opossum\OpossumControl.cs" />
-     <Compile Include="Assets\Scripts\Data\ItemData.cs" />
      <Compile Include="Assets\Scripts\Scene\SpikeRepeating.cs" />
+     <Compile Include="Assets\Scripts\Data\ItemSaveSystem.cs" />
+     <Compile Include="Assets\Scripts\Data\PlayerSaveSystem.cs" />
      <None Include="Assets\Fonts\LiberationSans - OFL.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/2020.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -668,6 +667,10 @@
       <Project>{652bb44f-e9a8-dae8-b7d9-f1d80eff3549}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{99012749-c41e-84ab-f45b-1f0932c8f59d}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{db965779-967a-1fbb-8669-f823ba7bbd46}</Project>
       <Name>UnityEditor.UI</Name>
@@ -683,10 +686,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{9f9852be-eeaa-08c1-477f-e31a2091f88e}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{99012749-c41e-84ab-f45b-1f0932c8f59d}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -35,13 +35,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Rider.Editor", "Unity
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{78afa25b-ccc4-4b32-2f32-7058a3ac9009}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{99012749-c41e-84ab-f45b-1f0932c8f59d}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Editor", "Unity.2D.Tilemap.Editor.csproj", "{c7b21049-6fc7-d1b8-853a-7cf48fc1a547}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VSCode.Editor", "Unity.VSCode.Editor.csproj", "{b68aebd0-37be-2074-4abe-f044fccbd96b}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{652bb44f-e9a8-dae8-b7d9-f1d80eff3549}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{99012749-c41e-84ab-f45b-1f0932c8f59d}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,14 +82,14 @@ Global
 		{8a97718d-0e9b-7e96-57c7-cc994a4fdbe2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78afa25b-ccc4-4b32-2f32-7058a3ac9009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{78afa25b-ccc4-4b32-2f32-7058a3ac9009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99012749-c41e-84ab-f45b-1f0932c8f59d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99012749-c41e-84ab-f45b-1f0932c8f59d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c7b21049-6fc7-d1b8-853a-7cf48fc1a547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{c7b21049-6fc7-d1b8-853a-7cf48fc1a547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b68aebd0-37be-2074-4abe-f044fccbd96b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b68aebd0-37be-2074-4abe-f044fccbd96b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{652bb44f-e9a8-dae8-b7d9-f1d80eff3549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{652bb44f-e9a8-dae8-b7d9-f1d80eff3549}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99012749-c41e-84ab-f45b-1f0932c8f59d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99012749-c41e-84ab-f45b-1f0932c8f59d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

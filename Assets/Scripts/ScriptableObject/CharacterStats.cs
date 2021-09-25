@@ -19,8 +19,6 @@ public class CharacterStats : ScriptableObject
     private bool isLadder;
     private bool isDead;
 
-    private int score;
-
     public LayerMask GroundLayer;
     public LayerMask whatIsLadder;
     public AnimationStates animationStates;
@@ -28,7 +26,6 @@ public class CharacterStats : ScriptableObject
     public void SetDefaultAllVariables()
     {
         SavePoint = false;
-        Score(0);
 
         IsDead(false);
         IsJump(false);
@@ -42,9 +39,6 @@ public class CharacterStats : ScriptableObject
 
     public void Speed(float inSpeed) {speed = inSpeed; }
     public float Speed(){ return speed; }
-
-    public void Score(int inScore) { score = inScore; }
-    public int Score() { return score; }
 
     public void IsRight(bool enable) { isRight = enable; }
     public bool IsRight() { return isRight; }

@@ -19,9 +19,10 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] private List<ItemControl> itemPrefab;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
     [SerializeField] private Text textScore;
-
+    [SerializeField] private ItemSaveSystem itemSaveSystem;
+    [SerializeField] private PlayerSaveSystem playerSaveSystem;
+    
     private PlayerControl player;
-    private DataManager dataManager;
 
     void Awake()
     {
@@ -30,12 +31,11 @@ public class GamePlayManager : MonoBehaviour
         listItem = FindObjectsOfType<ItemControl>();
         player = FindObjectOfType<PlayerControl>();
 
-        dataManager = new DataManager();
         OnLoad();
     }
 
-    void UpdateScore(){
-        textScore.text = "Score: " + player.characterStats.Score().ToString();
+    void ShowScore(){
+        textScore.text = "Score: " + player.Score.ToString();
     }
 
     void FixedHandlePlayer()
@@ -51,7 +51,11 @@ public class GamePlayManager : MonoBehaviour
         SavePointPlayer();
         PlayerRepawn();
         FixedHandlePlayer();
-        UpdateScore();
+    }
+
+    void FixedUpdate()
+    {
+        ShowScore();
     }
 
     void SavePointPlayer()
@@ -69,6 +73,7 @@ public class GamePlayManager : MonoBehaviour
         {
             Destroy(player.gameObject);
             player = Instantiate<PlayerControl>(playerPrefab);
+            player.Score = 0;
             OnLoad();
             cinemachineVirtualCamera.Follow = player.transform;
         }
@@ -76,13 +81,13 @@ public class GamePlayManager : MonoBehaviour
 
     void OnSave()
     {
-        dataManager.playerSaveSystem.SavePlayerData(player);
-        dataManager.itemSaveSystem.SaveData(listItem);
+        playerSaveSystem.SavePlayerData(player);
+        itemSaveSystem.SaveData(listItem);
     }
 
     void OnLoad()
     {
-        dataManager.playerSaveSystem.LoadPlayerData(player);
-        dataManager.itemSaveSystem.LoadData(listItem, itemPrefab);
+        playerSaveSystem.LoadPlayerData(player);
+        itemSaveSystem.LoadData(listItem, itemPrefab);
     }
 }
