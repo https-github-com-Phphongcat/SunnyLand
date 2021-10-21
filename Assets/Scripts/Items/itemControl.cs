@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemControl : MonoBehaviour
@@ -19,6 +18,7 @@ public class ItemControl : MonoBehaviour
     IEnumerator PlayAnimationDead()
     {
         amin.SetBool("dead", true);
+        gameObject.GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(timeTodead);
         Destroy(gameObject);
     }
