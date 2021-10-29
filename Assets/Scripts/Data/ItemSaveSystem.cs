@@ -27,7 +27,7 @@ public class ItemSaveSystem : MonoBehaviour
 
     public void SaveData(ItemControl[] listItem)
     {
-        string path = Application.persistentDataPath + itemsFile;
+        string path = Application.persistentDataPath + "/Game/" + itemsFile;
 
         BinaryFormatter formatter = new BinaryFormatter();
 
@@ -56,7 +56,7 @@ public class ItemSaveSystem : MonoBehaviour
 
     public void LoadData(ItemControl[] listItem, List<ItemControl> itemPrefab)
     {
-        string path = Application.persistentDataPath + itemsFile;
+        string path = Application.persistentDataPath + "/Game/" + itemsFile;
 
         BinaryFormatter formatter = new BinaryFormatter();
 

@@ -29,22 +29,21 @@ public class PlayerSaveSystem : MonoBehaviour
 
     public void SavePlayerData(PlayerControl player)
     {
-        string path = Application.persistentDataPath + "/" + PlayerFile;
         var playerData = new PlayerData(player);
 
-        File.WriteAllText(Application.persistentDataPath + "/" + PlayerFile, JsonUtility.ToJson(playerData));
+        File.WriteAllText(Application.persistentDataPath + "/Game/" + PlayerFile, JsonUtility.ToJson(playerData));
     }
 
     public void LoadPlayerData(PlayerControl player)
     {
-        string path = Application.persistentDataPath + "/" + PlayerFile;
+        string path = Application.persistentDataPath + "/Game/" + PlayerFile;
         if(!File.Exists(path))
         {
             SavePlayerData(player);
             return;
         }
 
-        var playerData = JsonUtility.FromJson<PlayerData>(File.ReadAllText(Application.persistentDataPath + "/" + PlayerFile));
+        var playerData = JsonUtility.FromJson<PlayerData>(File.ReadAllText(Application.persistentDataPath + "/Game/" + PlayerFile));
 
         Vector3 position = new Vector3(playerData.Position[0], playerData.Position[1], playerData.Position[2]);
 

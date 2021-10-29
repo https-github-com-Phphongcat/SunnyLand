@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{28eb9435-d781-6a2c-2302-c2d519404814}</ProjectGuid>
+    <ProjectGuid>{d853c03e-baea-b422-27be-695162ec4743}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -53,7 +53,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Items\WinGame.cs" />
-     <Compile Include="Assets\Scripts\Items\itemControl.cs" />
+     <Compile Include="Assets\Scripts\Items\ItemControl.cs" />
+     <Compile Include="Assets\Scripts\UI\RankPanel.cs" />
      <Compile Include="Assets\Scripts\UI\OptionsHome.cs" />
      <Compile Include="Assets\Scripts\Enemies\Eagle\EagleControl.cs" />
      <Compile Include="Assets\Scripts\ScriptableObject\CharacterStats.cs" />
@@ -61,6 +62,7 @@
      <Compile Include="Assets\Scripts\Scene\HomeManager.cs" />
      <Compile Include="Assets\Scripts\Items\CrankDownControl.cs" />
      <Compile Include="Assets\Scripts\Scene\GamePlayManager.cs" />
+     <Compile Include="Assets\Scripts\Data\RankController.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerEventUI.cs" />
      <Compile Include="Assets\Scripts\Data\PlayerSaveSystem.cs" />
      <Compile Include="Assets\Scripts\Data\ItemSaveSystem.cs" />
@@ -283,10 +285,10 @@
  <HintPath>C:/Program Files/Unity/2020.3.15f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
- <HintPath>D:/SunnyLand.git/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ <HintPath>C:/Users/phpho/SunnyGame/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>D:/SunnyLand.git/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/phpho/SunnyGame/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/2020.3.15f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -636,71 +638,71 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Cinemachine.csproj">
-      <Project>{d6c3d093-fb9c-df52-12c5-5ccbd062997d}</Project>
+      <Project>{cd07a5a0-3264-6c8f-23c8-2d203fc6ffb8}</Project>
       <Name>Cinemachine</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{60cebf33-678e-f214-e6a5-25d52848f47d}</Project>
+      <Project>{5e93c1a9-9784-8e8e-ba3a-9e0b47aa5ecb}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{0aba2ba6-e1c1-8eb9-c290-99af6f47950b}</Project>
+      <Project>{8fa80e7d-8c01-8216-88b2-af3ff72f05a3}</Project>
       <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
-      <Project>{03856983-55f9-26dd-059f-e54c79aa4a79}</Project>
+      <Project>{c8045bc7-9445-9557-51f7-59efa9054e6f}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{571f3405-0210-d567-e1a8-a5085ba5b9d6}</Project>
+      <Project>{e6173417-1294-1b57-955f-de5149b70a63}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{85e63454-9ef5-0ace-b522-adbfd68408b5}</Project>
+      <Project>{2a192c5d-990a-b8e1-4d83-76c94b1d7d7b}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{d59ed992-99ef-9a0d-f380-c74ceb08b25f}</Project>
+      <Project>{5b8fc4a7-abec-bcf7-5421-f49acc207bf9}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{76115a03-f5c0-331a-82b9-aa3110364d5d}</Project>
+      <Project>{c95f85bb-0c77-aaed-c8e6-b69c7827934d}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{688a2af4-17e1-552b-35b7-ef843994afc0}</Project>
+      <Project>{55e3c91d-5ae2-2b8c-f992-71d089c7ba36}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{d8b22450-9e5e-14c0-6ef5-119af81ca0d4}</Project>
+      <Project>{79db9c4c-e9db-a66f-7815-27cc470877cd}</Project>
       <Name>PackageToolsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{241bc21e-9dfa-8273-38c6-47f2df370b88}</Project>
+      <Project>{092f08fb-cdc9-afc6-2574-b5b6e9eba3b5}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{d4d6c78e-d345-8e6e-0c76-7f2492afb986}</Project>
+      <Project>{c99b959b-a1b1-4012-d37b-989fef1f2463}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{427272f7-60e1-a77a-440a-5e7a7b229774}</Project>
+      <Project>{2af63c3f-cc45-b7e7-6d28-8e638b923437}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{aef6e8c4-16b9-2442-97d0-0f23ff16a234}</Project>
+      <Project>{ffd462a1-3486-0bca-5e0a-48b4a9304316}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{66aca30e-23ec-984e-7b96-a0a4f40a8353}</Project>
+      <Project>{070ffed4-2711-2be7-eec5-461cddf01fba}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{da4c24c1-55da-c0d1-978b-d23f487a83de}</Project>
+      <Project>{7ed15a75-0009-ae58-2240-a017e6119ed7}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{f1ef675b-9e74-e0c3-773e-e9f0e62f0a35}</Project>
+      <Project>{9fab58ea-12cb-3a87-6656-d7f46d0a66fd}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

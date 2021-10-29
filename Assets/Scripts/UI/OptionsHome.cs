@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System.Linq;
 
 public class OptionsHome : MonoBehaviour
 {
@@ -14,15 +15,10 @@ public class OptionsHome : MonoBehaviour
 
     public void NewGame()
     {
-        DirectoryInfo di = new DirectoryInfo(Application.persistentDataPath);
-        foreach (FileInfo file in di.EnumerateFiles()){
-            file.Delete(); 
-        }
-        foreach (DirectoryInfo dir in di.EnumerateDirectories()){
-            dir.Delete(true); 
-        }
+        DirectoryInfo di = new DirectoryInfo(Application.persistentDataPath + "/Game");
 
-        Directory.CreateDirectory(Application.persistentDataPath + "/Game");
+        foreach (FileInfo file in di.EnumerateFiles()) file.Delete();
+        foreach (DirectoryInfo dir in di.EnumerateDirectories()) dir.Delete(true);
 
         PlayGame();
     }
