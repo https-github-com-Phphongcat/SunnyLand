@@ -52,15 +52,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Items\WinGame.cs" />
-     <Compile Include="Assets\Scripts\Items\ItemControl.cs" />
+     <Compile Include="Assets\Scripts\Item\WinGame.cs" />
+     <Compile Include="Assets\Scripts\Item\ItemControl.cs" />
      <Compile Include="Assets\Scripts\UI\RankPanel.cs" />
      <Compile Include="Assets\Scripts\UI\OptionsHome.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Eagle\EagleControl.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Eagle\EagleControl.cs" />
      <Compile Include="Assets\Scripts\ScriptableObject\CharacterStats.cs" />
-     <Compile Include="Assets\Scripts\Items\GroundMoveRepawn.cs" />
+     <Compile Include="Assets\Scripts\Item\GroundMoveRepawn.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Opossum\OpossumControl.cs" />
      <Compile Include="Assets\Scripts\Scene\HomeManager.cs" />
-     <Compile Include="Assets\Scripts\Items\CrankDownControl.cs" />
+     <Compile Include="Assets\Scripts\Item\CrankDownControl.cs" />
      <Compile Include="Assets\Scripts\Scene\GamePlayManager.cs" />
      <Compile Include="Assets\Scripts\Data\RankController.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerEventUI.cs" />
@@ -68,7 +69,7 @@
      <Compile Include="Assets\Scripts\Data\ItemSaveSystem.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\UI\ScrollBackground.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Opossum\OpossumControl.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Opossum\Opossum.cs" />
      <Compile Include="Assets\Scripts\Scene\SpikeRepeating.cs" />
      <None Include="Assets\Fonts\LiberationSans - OFL.txt" />
  <Reference Include="UnityEngine">
