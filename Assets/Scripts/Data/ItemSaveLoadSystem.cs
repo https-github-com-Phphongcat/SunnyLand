@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -17,7 +16,6 @@ public class ItemData
 public enum ItemType
 {
     DIAMOND = 0,
-    BERRY = 1
 }
 
 [System.Serializable]
