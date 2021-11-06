@@ -65,8 +65,8 @@
      <Compile Include="Assets\Scripts\Scene\GamePlayManager.cs" />
      <Compile Include="Assets\Scripts\Data\RankController.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerEventUI.cs" />
-     <Compile Include="Assets\Scripts\Data\PlayerSaveSystem.cs" />
-     <Compile Include="Assets\Scripts\Data\ItemSaveSystem.cs" />
+     <Compile Include="Assets\Scripts\Data\PlayerSaveLoadSystem.cs" />
+     <Compile Include="Assets\Scripts\Data\ItemSaveLoadSystem.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\UI\ScrollBackground.cs" />
      <Compile Include="Assets\Scripts\Enemy\Opossum\Opossum.cs" />

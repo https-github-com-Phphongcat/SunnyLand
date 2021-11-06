@@ -43,18 +43,18 @@ public class RankController : MonoBehaviour
 
     void SaveRank()
     {
-        var rankSystem = new RankSaveSystem();
+        var rankSystem = new RankSaveLoadSystem();
         rankSystem.SaveRank(inputField.text, player.Score);
     }
 }
 
 [System.Serializable]
-public class DataRanker
+public class RankData
 {
     public string Name;
     public int Score;
 
-    public DataRanker(string name, int score)
+    public RankData(string name, int score)
     {
         Name = name;
         Score = score;
@@ -62,25 +62,25 @@ public class DataRanker
 }
 
 [System.Serializable]
-public class RankSaveSystem
+public class RankSaveLoadSystem
 {
     private const string RankFile = "Rank.save";
-    private List<DataRanker> _listRanker;
+    private List<RankData> _listRanker;
 
-    public RankSaveSystem()
+    public RankSaveLoadSystem()
     {
-        _listRanker = new List<DataRanker>();
+        _listRanker = new List<RankData>();
         LoadRank();
     }
 
     public void SaveRank(string name, int score)
     {
-        var dataRanker = new DataRanker(name, score);
+        var dataRanker = new RankData(name, score);
         
         if(_listRanker.Count <= 0) _listRanker.Add(dataRanker);
         else
         {
-            var data = new DataRanker(_listRanker[_listRanker.Count - 1].Name,
+            var data = new RankData(_listRanker[_listRanker.Count - 1].Name,
                 _listRanker[_listRanker.Count - 1].Score);
             
             var isChange = false;
@@ -123,13 +123,13 @@ public class RankSaveSystem
             var path = Application.persistentDataPath + "/" + i + RankFile;
             if (File.Exists(path))
             {
-                var data = JsonUtility.FromJson<DataRanker>(File.ReadAllText(path));
+                var data = JsonUtility.FromJson<RankData>(File.ReadAllText(path));
                 _listRanker.Add(data);
             }
         }
     }
 
-    public List<DataRanker> GetRankerList()
+    public List<RankData> GetRankerList()
     {
         return _listRanker;
     }

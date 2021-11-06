@@ -19,7 +19,7 @@ public enum ItemType
 }
 
 [System.Serializable]
-public class ItemSaveSystem : MonoBehaviour
+public class ItemSaveLoadSystem : MonoBehaviour
 {
     private const string itemsFile = "/Items.save";
 

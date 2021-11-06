@@ -1,8 +1,5 @@
-using System.Collections;
 using UnityEngine;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using UnityEngine.UI;
 
 [System.Serializable]
 public class PlayerData
@@ -23,7 +20,7 @@ public class PlayerData
 }
 
 [System.Serializable]
-public class PlayerSaveSystem : MonoBehaviour
+public class PlayerSaveLoadSystem : MonoBehaviour
 {
     private const string PlayerFile = "Player.save";
 

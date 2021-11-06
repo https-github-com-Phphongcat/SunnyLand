@@ -16,7 +16,7 @@ public class RankPanel : MonoBehaviour
 
     private void OnEnable()
     {
-        var rankSaveSystem = new RankSaveSystem();
+        var rankSaveSystem = new RankSaveLoadSystem();
         for(int i = 0; i < rankSaveSystem.GetRankerList().Count; i++)
         {
             namePlayers[i].text = rankSaveSystem.GetRankerList()[i].Name;

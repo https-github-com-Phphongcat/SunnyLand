@@ -2085,7 +2085,7 @@ GameObject:
   - component: {fileID: 1634956703}
   - component: {fileID: 1634956705}
   m_Layer: 5
-  m_Name: RankPanel
+  m_Name: RankPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

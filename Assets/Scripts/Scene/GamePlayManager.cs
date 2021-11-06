@@ -1,14 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEditor;
 using Cinemachine;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.UI;
-using System.IO;
-using System.Xml;
-using System.Xml.Serialization;
 
 public class GamePlayManager : MonoBehaviour
 {
@@ -19,8 +12,8 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] private List<ItemControl> itemPrefab;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
     [SerializeField] private Text textScore;
-    [SerializeField] private ItemSaveSystem itemSaveSystem;
-    [SerializeField] private PlayerSaveSystem playerSaveSystem;
+    [SerializeField] private ItemSaveLoadSystem itemSaveLoadSystem;
+    [SerializeField] private PlayerSaveLoadSystem playerSaveLoadSystem;
     
     private PlayerControl player;
 
@@ -81,13 +74,13 @@ public class GamePlayManager : MonoBehaviour
 
     void OnSave()
     {
-        playerSaveSystem.SavePlayerData(player);
-        itemSaveSystem.SaveData(listItem);
+        playerSaveLoadSystem.SavePlayerData(player);
+        itemSaveLoadSystem.SaveData(listItem);
     }
 
     void OnLoad()
     {
-        playerSaveSystem.LoadPlayerData(player);
-        itemSaveSystem.LoadData(listItem, itemPrefab);
+        playerSaveLoadSystem.LoadPlayerData(player);
+        itemSaveLoadSystem.LoadData(listItem, itemPrefab);
     }
 }

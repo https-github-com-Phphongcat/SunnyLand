@@ -1023,7 +1023,7 @@ GameObject:
   - component: {fileID: 192197892}
   - component: {fileID: 192197894}
   m_Layer: 5
-  m_Name: WinConsole
+  m_Name: WinPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2072,7 +2072,7 @@ GameObject:
   - component: {fileID: 336611006}
   - component: {fileID: 336611005}
   m_Layer: 5
-  m_Name: Button
+  m_Name: GoHomeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20684,7 +20684,7 @@ GameObject:
   - component: {fileID: 1566849980}
   - component: {fileID: 1566849979}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37919,8 +37919,8 @@ MonoBehaviour:
   - {fileID: 3606240049781742483, guid: e5b75ac770b96c7408854ffe3a3bfcae, type: 3}
   cinemachineVirtualCamera: {fileID: 696910039}
   textScore: {fileID: 136509609}
-  itemSaveSystem: {fileID: 2115044000}
-  playerSaveSystem: {fileID: 2115043999}
+  itemSaveLoadSystem: {fileID: 2115044000}
+  playerSaveLoadSystem: {fileID: 2115043999}
 --- !u!4 &2115043997
 Transform:
   m_ObjectHideFlags: 0
