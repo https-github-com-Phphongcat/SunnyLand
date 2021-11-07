@@ -20059,7 +20059,7 @@ GameObject:
   - component: {fileID: 1423070115}
   - component: {fileID: 1423070114}
   m_Layer: 5
-  m_Name: back
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
